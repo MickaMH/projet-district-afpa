@@ -211,7 +211,13 @@ p{color: black;}
     display: flex;
     justify-content: center;
     align-content: center;
-    
+}
+
+.main_validation_mobile{
+    width: 100%; height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .message_validation{
@@ -222,6 +228,16 @@ p{color: black;}
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.message_validation_mobile{
+    width: auto; height: 10rem;
+    border: 0.2rem solid #980848;
+    border-radius: 0.5rem 0.5rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 

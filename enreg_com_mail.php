@@ -190,9 +190,30 @@ $sql = "INSERT INTO commande_test (id_plat, quantite, total, date_commande, nom_
 $conn->exec($sql);
 ?>
 
-<div class="row main_validation">
 
-    <div class="col-12 fs-3 message_validation">
+<?php
+
+    include "assets/php/fichiers_php/carousel_mobile.php";
+
+?>
+
+<div class="row main_validation_mobile d-sm-none">
+
+    <div class="col-10 fs-3 message_validation_mobile">
+
+        <?php
+
+            echo "Votre commande est validée. $confirm_mail";
+
+        ?>
+
+    </div>
+
+</div>
+
+<div class="row main_validation d-none d-lg-block">
+
+    <div class="col-lg-12 fs-3 message_validation">
 
         <?php
 

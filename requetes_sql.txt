@@ -1,0 +1,135 @@
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+REQUETES D'INTERROGATION DE LA BASE DE DONNEES
+
+
+1. Afficher la liste des commandes:
+
+    SELECT date_commande AS "Date", nom_client AS "Nom", telephone_client AS "Téléphone", email_client AS "Email", adresse_client AS "Adresse", id_plat AS "Plat", total AS "Prix"
+    FROM commande ;
+
+
+2. Afficher la liste des plats en spécifiant la catégorie:
+
+    SELECT plat.id AS "Id du plat", plat.libelle AS "Plat", categorie.libelle AS "Catégorie"
+    FROM plat
+    JOIN categorie ON plat.id_categorie = categorie.id ;
+
+
+3. Afficher les catégories et le nombre de plats actifs dans chaque catégorie:
+
+    SELECT categorie.libelle AS "Catégories", COUNT(plat.active) AS "Plats actifs"
+    FROM categorie
+    LEFT JOIN plat ON categorie.id = plat.id_categorie
+    GROUP BY categorie.libelle ;
+
+
+4. Afficher la liste des plats les plus vendus (par ordre décroissant):
+
+    SELECT plat.id AS "Id du plat", plat.libelle AS "Plat", SUM(quantite) AS "Ventes"
+    FROM commande
+    LEFT JOIN plat ON commande.id_plat = plat.id
+    GROUP BY id_plat
+    ORDER BY SUM(quantite) DESC ;
+
+
+5. Afficher le plat le plus rémunérateur:
+
+    SELECT plat.id AS "Id du plat", plat.libelle AS "Plat", SUM(total) AS "Revenu"
+    FROM commande
+    LEFT JOIN plat ON commande.id_plat = plat.id 
+    GROUP BY id_plat
+    ORDER BY SUM(total) DESC
+    LIMIT 1 ;
+
+
+6. Afficher la liste des clients et le chiffre d'affaires généré par client (par ordre décroissant):
+
+    SELECT nom_client AS "Nom", total AS "Chiffre d'affaires"
+    FROM commande
+    ORDER BY total DESC ;
+
+
+BLOC DES REQUETES D'INTERROGATION:
+
+
+    SELECT date_commande AS "Date", nom_client AS "Nom", telephone_client AS "Téléphone", email_client AS "Email", adresse_client AS "Adresse", id_plat AS "Plat", total AS "Prix"
+    FROM commande ;
+
+    SELECT plat.id AS "Id du plat", plat.libelle AS "Plat", categorie.libelle AS "Catégorie"
+    FROM plat
+    JOIN categorie ON plat.id_categorie = categorie.id ;
+
+    SELECT categorie.libelle AS "Catégories", COUNT(plat.active) AS "Plats actifs"
+    FROM categorie
+    LEFT JOIN plat ON categorie.id = plat.id_categorie
+    GROUP BY categorie.libelle ;
+
+    SELECT plat.id AS "Id du plat", plat.libelle AS "Plat", SUM(quantite) AS "Ventes"
+    FROM commande
+    LEFT JOIN plat ON commande.id_plat = plat.id
+    GROUP BY id_plat
+    ORDER BY SUM(quantite) DESC ;
+
+    SELECT plat.id AS "Id du plat", plat.libelle AS "Plat", SUM(total) AS "Revenu"
+    FROM commande
+    LEFT JOIN plat ON commande.id_plat = plat.id 
+    GROUP BY id_plat
+    ORDER BY SUM(total) DESC
+    LIMIT 1 ;
+
+    SELECT nom_client AS "Nom", total AS "Chiffre d'affaires"
+    FROM commande
+    ORDER BY total DESC ;
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+REQUETES DE MODIFICATION DE LA BASE DE DONNEES
+
+
+1. Ecrivez une requête permettant de supprimer les plats non actif de la base de données:
+
+    DELETE FROM plat WHERE active = "No" ;
+
+
+2. Ecrivez une requête permettant de supprimer les commandes avec le statut livré:
+
+    DELETE FROM commande WHERE etat = "Livrée" ;
+
+
+3. Ecrivez un script sql permettant d'ajouter une nouvelle catégorie et un plat dans cette nouvelle catégorie:
+
+    INSERT INTO categorie (id, libelle, image, active) 
+    VALUES (20, "BOISSON", "boisson_cat.jpg", "Yes") ;
+    INSERT INTO plat (id, libelle, description, prix, image, id_categorie, active) 
+    VALUES (21, "BOISSON Eau", "Bouteille de 0,5L", 2.00, "eau.png", 20, "Yes") ;
+
+
+4. Ecrivez une requête permettant d'augmenter de 10% le prix des plats de la catégorie 'Pizza':
+
+    UPDATE plat
+    SET prix = prix * 1.1
+    WHERE id_categorie = 1 ;
+
+
+BLOC DES REQUETES DE MODIFICATION:
+
+
+    DELETE FROM plat WHERE active = "No" ;
+
+    DELETE FROM commande WHERE etat = "Livrée" ;
+
+    INSERT INTO categorie (id, libelle, image, active) 
+    VALUES (20, "BOISSON", "boisson_cat.jpg", "Yes") ;
+    INSERT INTO plat (id, libelle, description, prix, image, id_categorie, active) 
+    VALUES (21, "BOISSON Eau", "Bouteille de 0,5L", 2.00, "eau.png", 20, "Yes") ;
+
+    UPDATE plat
+    SET prix = prix * 1.1
+    WHERE id_categorie = 1 ;
+
+
+---------------------------------------------------------------------------------------------------------------------------------------

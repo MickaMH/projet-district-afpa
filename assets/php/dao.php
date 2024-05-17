@@ -52,7 +52,7 @@ function get_libelle() {
         $categorieId = $_GET['id'];
 
         // Requête pour récupérer les détails du plat associé à l'ID
-        $query = "SELECT libelle FROM categorie WHERE id = :categorieId AND active='Yes' ";
+        $query = "SELECT libelle FROM categorie WHERE id = :categorieId ";
         $stmt = $pdo->prepare($query);
         $stmt->bindParam(':categorieId', $categorieId, PDO::PARAM_INT);
         $stmt->execute();
@@ -86,7 +86,7 @@ function get_plats_categorie($pdo, $categorie_id = 1, $page = 1) {
     // Calculer le nombre total d'éléments pour la pagination
     $items_per_page = 10;
     $offset = ($page - 1) * $items_per_page;
-    $total_items_query = "SELECT COUNT(*) AS total_items FROM plat WHERE id_categorie = :categorie_id AND active='Yes' ";
+    $total_items_query = "SELECT COUNT(*) AS total_items FROM plat WHERE id_categorie = :categorie_id ";
     $total_items_stmt = $pdo->prepare($total_items_query);
     $total_items_stmt->bindParam(':categorie_id', $categorie_id, PDO::PARAM_INT);
     $total_items_stmt->execute();
@@ -94,7 +94,7 @@ function get_plats_categorie($pdo, $categorie_id = 1, $page = 1) {
 
     // Sélectionner les plats de la catégorie spécifiée
     try {
-        $query = "SELECT * FROM plat WHERE id_categorie = :categorie_id AND active='Yes' LIMIT :offset, :items_per_page";
+        $query = "SELECT * FROM plat WHERE id_categorie = :categorie_id LIMIT :offset, :items_per_page";
         $stmt = $pdo->prepare($query);
         $stmt->bindParam(':categorie_id', $categorie_id, PDO::PARAM_INT);
         $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);

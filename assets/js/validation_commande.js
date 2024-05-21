@@ -2,7 +2,8 @@ let formulaireCommandeValide = document.getElementById("envoi_commande");
 
 
 let quantite = document.getElementById("quantite");
-let quantiteVerif = /^(0|[1-9][0-9]?|100)$/;
+let quantiteVerif = /^([1-9][0-9]?|100)$/
+;
 
 let nom = document.getElementById("nom");
 let nomVerif = /^[a-zA-Z][a-zA-Z' -]{1,50}$/;
@@ -18,7 +19,7 @@ let phone = document.getElementById("phone");
 let phoneVerif = /^[0-9]{10}$/;
                                                                                     
 let adresse = document.getElementById("adresse");                 
-let adresseVerif =  /^(\d+\s*(?:bis|ter)?\s+[a-zA-Z,\. ]+)\s+(\d{5})\s+([a-zA-Z]+)$/;
+let adresseVerif = /^(\d+\s*(?:bis|ter)?\s+[a-zA-Z,\. ]+)\s+(\d{5})\s+([a-zA-Z]+)$/;
 
 
 let requisQuantite = document.getElementById("requisQuantite"); 
@@ -46,19 +47,19 @@ let requisAdresse = document.getElementById("requisAdresse");
                 if (quantite.validity.valueMissing)
                 {
                     event.preventDefault();
-                    requisQuantite.textContent = "\u26a0 Entrez une quantité";
+                    requisQuantite.textContent = "\u26a0";
                     requisQuantite.style.fontSize = "1.2rem";
                     requisQuantite.style.fontWeight = "normal";
                     requisQuantite.style.color = "red";
                     requisQuantite.style.fontFamily = "helvetica";
-                    requisQuantite.className = "ms-1 mt-3 text-center";
+                    requisQuantite.className = "ms-1 ms-lg-1 mt-3 mt-lg-3";
                     quantite.style.borderColor = "red";
                 }
 
                 else if (quantiteVerif.test(quantite.value) == false)                                      
                 {
                     event.preventDefault();
-                    requisQuantite.textContent = "\u26a0 Quantité non valide";
+                    requisQuantite.textContent = "\u26a0";
                     requisQuantite.style.fontSize = "1.2rem";
                     requisQuantite.style.color = "orange";
                     requisQuantite.style.fontWeight = "normal";

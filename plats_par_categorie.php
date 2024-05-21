@@ -7,12 +7,6 @@
 <!-- MAIN -->
 <main class="container-fluid pb-5">
 
-        <?php
-
-            include "assets/php/fichiers_php/carousel_mobile.php";
-
-        ?>
-
         <!-- div remplissage plats par catégorie -->
         <div class="row d-flex justify-content-center">
 
@@ -34,7 +28,7 @@
 
                 foreach ($plats as $plat) {
 
-                echo '<div class="col-lg-4 mb-5 mb-lg-5 mt-3 mt-lg-5">';
+                echo '<div class="col-lg-3 mb-5 mb-lg-5 mt-3 mt-lg-5">';
                 echo '<div class="card w-auto border-4 bordures rounded-5">';
                 echo '<img src="assets/img/plats/' . $plat['image'] . '" class="card-img-top p-3 rounded-5" alt="">';
                 echo '<h5 class="card-text fs-3 fw-medium ms-3">' . $plat['libelle'] . '</h5>';
@@ -50,20 +44,14 @@
 
         </div>
 
-        <!-- boutons précédent retour suivant -->
+        <!-- bouton retour -->
         <div class="row mt-lg-5 mb-lg-5">
 
-            <div class="col-4 col-lg-4 d-flex">
-            </div>
-
-            <div class="col-4 col-lg-4 d-flex">
+            <div class="col-12 col-lg-12 d-flex justify-content-center">
 
                 <a class="d-flex justify-content-center align-items-center fw-medium mx-auto shadow-lg fs-5 rounded-4 bouton_categories" 
                     style="width: 10rem; height: 3rem;" href="categories.php" role="button">Retour</a>
                         
-            </div>
-
-            <div class="col-4 col-lg-4 d-flex">
             </div>
 
         </div>

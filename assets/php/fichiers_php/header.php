@@ -124,14 +124,7 @@
             <!-- videos -->
             <div class="col-4 display-inline-block d-none d-lg-block">
 
-                <!-- <img src="#" class="img-fluid" alt="" title=""> -->
-
-                <!-- <video autoplay loop muted class="img-fluid ">
-
-                    <source src="assets\img\videos\pancarte_taco.mp4" type="video/mp4">
-                    <p>Votre navigateur ne prend pas en charge la vidéo.</p>
-
-                </video> -->
+                
 
             </div>
     
@@ -148,14 +141,7 @@
 
             <div class="col-4 display-inline-block d-none d-lg-block">
 
-                <!-- <img src="#" class="img-fluid" alt="" title=""> -->
 
-                <!-- <video autoplay loop muted class="img-fluid ">
-
-                    <source src="assets\img\videos\rangement_(hd_1920_1080_30fps).mp4" type="video/mp4">
-                    <p>Votre navigateur ne prend pas en charge la vidéo.</p>
-
-                </video> -->
 
             </div>
 
@@ -177,7 +163,12 @@
                         
             </div> -->
 
-               
+            <?php
+
+                include "assets/php/fichiers_php/carousel_mobile.php";
+
+            ?>   
+
         </div>
     
     </nav>

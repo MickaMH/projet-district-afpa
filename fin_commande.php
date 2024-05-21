@@ -8,8 +8,6 @@
 
     <?php
 
-        include "assets/php/fichiers_php/carousel_mobile.php";
-
         include "assets/php/fichiers_php/enreg_com_mail.php";
 
     ?>

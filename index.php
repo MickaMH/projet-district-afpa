@@ -51,12 +51,6 @@
             
             </div>
 
-            <?php
-
-            include "assets/php/fichiers_php/carousel_mobile.php";
-
-            ?>
-
         </div>
 
         <!-- icones categories mobile -->
@@ -236,27 +230,7 @@
 
         <div class="row mb-lg-5 mt-lg-5">
 
-            <!-- div categorie plat mobile -->
-            <div class="d-block d-sm-none">
-
-                    <div id="promo_categorie_mobile" class="w-100"></div>
-
-                    <div id="promo_plat_1_mobile" class="w-100"></div>
-
-                    <div id="promo_plat_2_mobile" class="w-100" ></div>
-
-            </div>
-
-            <!-- div categorie plat desktop -->
-            <div class="d-flex justify-content-around">
-
-                    <div id="promo_categorie" class="w-25 d-none d-lg-block"></div>
-
-                    <div id="promo_plat_1" class="w-25 d-none d-lg-block"></div>
-
-                    <div id="promo_plat_2" class="w-25 d-none d-lg-block" ></div>
-
-            </div>
+            
 
         </div>
 

@@ -7,12 +7,6 @@
     <!-- MAIN -->
         <main class="container-fluid pb-5">
 
-            <?php
-
-                include "assets/php/fichiers_php/carousel_mobile.php";
-
-            ?>
-
             <!-- intitulé main -->
             <div class="row">
 

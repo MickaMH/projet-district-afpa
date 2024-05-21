@@ -7,12 +7,6 @@
     <!-- MAIN -->
     <main class="container-fluid pb-5">
 
-        <?php
-
-            include "assets/php/fichiers_php/carousel_mobile.php";
-
-        ?>
-
         <!-- intitulé main -->
         <div class="row">
 
@@ -43,7 +37,7 @@
                     <div>
 
                         <!-- Image SM -->
-                        <img src="assets/img/plats/<?php echo $plat['image']; ?>" alt="Image du plat" class="card-img-top p-3 rounded-5 d-sm-none" style="width: 17.6rem; height: 17.6rem;">
+                        <img src="assets/img/plats/<?php echo $plat['image']; ?>" alt="Image du plat" class="card-img-top p-3 rounded-5 d-sm-none img-fluid" style="width: auto; height: auto;">
                         <!-- Image LG -->
                         <img src="assets/img/plats/<?php echo $plat['image']; ?>" alt="Image du plat" class="p-3 rounded-5 d-none d-lg-block">
 

@@ -7,12 +7,6 @@
     <!-- MAIN -->
     <main class="container-fluid pb-5">
 
-        <?php
-
-            include "assets/php/fichiers_php/carousel_mobile.php";
-
-        ?>
-
         <!-- intitulé main -->
         <div class="row">
 
@@ -67,9 +61,9 @@
             </div>
 
             <!-- bouton envoyer -->
-            <div class="col-sm-12 col-lg-12 d-flex justify-content-center">
+            <div class="col-12 col-lg-12 d-flex justify-content-center">
 
-                <input class="d-flex justify-content-center fw-medium mx-auto shadow-lg fs-5 my-4 rounded-4 bouton_envoyer" id="envoi_contact" 
+                <input class="d-flex justify-content-center fw-medium mx-auto shadow-lg fs-5 rounded-4 bouton_envoyer" id="envoi_contact" 
                         style="width: 10rem; height: 3rem;" type="submit" value="Envoyer">
 
             </div>

@@ -6,14 +6,6 @@
     background-size: cover;
 }
 
-parallax_mobile{
-    background-image: url("/assets/img/parallax/parallax_mobile.png");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .couleur_fond{
     background-color: white;
 }
@@ -119,7 +111,6 @@ input:focus, input.form-control:focus {
 .champ_recherche{
     background-color: white;
     border: 0.3rem solid #980848;
-
     border-top-left-radius: 2rem 2rem;
     border-top-right-radius: 2rem 2rem;
     border-bottom-left-radius: 2rem 2rem;
@@ -207,17 +198,14 @@ sup{
 p{color: black;}
 
 .main_validation{
-    width: 100%; height: 20rem;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    width: auto; height: auto;
 }
 
-.main_validation_mobile{
-    width: 100%; height: 20rem;
+.bloc_message_validation{
     display: flex;
     justify-content: center;
-    align-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 .message_validation{
@@ -230,14 +218,23 @@ p{color: black;}
     align-items: center;
 }
 
+.main_validation_mobile{
+    width: auto; height: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2rem;
+}
+
 .message_validation_mobile{
-    width: auto; height: 10rem;
+    width: auto; height: 9rem;
     border: 0.2rem solid #980848;
     border-radius: 0.5rem 0.5rem;
     background-color: white;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 
 

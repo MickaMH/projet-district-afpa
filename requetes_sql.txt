@@ -103,9 +103,9 @@ REQUETES DE MODIFICATION DE LA BASE DE DONNEES
 3. Ecrivez un script sql permettant d'ajouter une nouvelle catégorie et un plat dans cette nouvelle catégorie:
 
     INSERT INTO categorie (id, libelle, image, active) 
-    VALUES (9, "BOISSON", "boisson_cat.jpg", "Yes") ;
+    VALUES (9, "Boisson", "boisson_cat.jpg", "Yes") ;
     INSERT INTO plat (id, libelle, description, prix, image, id_categorie, active) 
-    VALUES (30, "BOISSON Eau", "Bouteille de 0,5L", 2.00, "eau.png", 20, "Yes") ;
+    VALUES (30, "BOISSON Eau", "Bouteille de 0,5L", 2.00, "eau.png", 9, "Yes") ;
 
 
 4. Ecrivez une requête permettant d'augmenter de 10% le prix des plats de la catégorie 'Pizza':

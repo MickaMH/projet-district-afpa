@@ -1,18 +1,11 @@
 <?php
 
-    include "assets/php/fichiers_php/header.php";
-
-?>
-
-<main class="container-fluid pb-5">
-
-<?php
-require '/home/micka/Bureau/Projet-The-District/vendor/autoload.php';
+require 'php_mail/vendor/autoload.php';
 
 // Assurez-vous d'avoir inclus la bibliothèque PHPMailer
-require '/home/micka/Bureau/Projet-The-District/vendor/phpmailer/phpmailer/src/PHPMailer.php';
-require '/home/micka/Bureau/Projet-The-District/vendor/phpmailer/phpmailer/src/SMTP.php';
-require '/home/micka/Bureau/Projet-The-District/vendor/phpmailer/phpmailer/src/Exception.php';
+require 'php_mail/vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require 'php_mail/vendor/phpmailer/phpmailer/src/SMTP.php';
+require 'php_mail/vendor/phpmailer/phpmailer/src/Exception.php';
 
 // Créez une nouvelle instance PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -69,14 +62,14 @@ $message = "
             margin-left: 1rem;
         }
         .card {
-            width: 26rem; height: 11rem;
+            width: 28rem; height: 13rem;
             border: 0.1rem solid #980848;
             border-radius: 1rem 1rem;
             display: flex;
             margin-top: 1.5rem;
         }
         .image_commande {
-            width: 10rem; height: 10rem;
+            width: 12rem; height: 12rem;
             padding: 0.5rem;
             border-radius: 1rem 1rem;
         }
@@ -87,9 +80,6 @@ $message = "
         }
         .recapitulatif{
             text-decoration: underline;
-        }
-        .total{
-            margin-left: 1rem;
         }
         .au_revoir{
             margin-left: 1rem;
@@ -112,7 +102,7 @@ $message = "
 
                 <p>Nous confirmons la validation de votre commande.</p>
 
-                <p class='recapitulatif'>Récapitulatif :</p>
+                <p class='recapitulatif'>Récapitulatif:</p>
             </div>
 
         </div>
@@ -128,14 +118,13 @@ $message = "
             <div class='card_body'>
 
                 <p>$libelle</p>
+                <p>Prix unitaire: $prix &#8364;</p>
                 <p>Quantité: $quantite</p>
-                <p>Prix: $prix &#8364;</p>
+                <p>Prix TTC: $total_decimal €</p>
 
             </div>
 
         </div>
-
-            <p class='total'>Total TTC : $total_decimal €</p>
             
             <p class='au_revoir'>A bientôt chez The District.</p>
 
@@ -183,52 +172,10 @@ $nom_client = $nom . ' ' . $prenom;
 
 $total = ($prix * $quantite);
 
-$sql = "INSERT INTO commande_test (id_plat, quantite, total, date_commande, nom_client, telephone_client, email_client, adresse_client)
-        VALUES ('$id', '$quantite', '$total', '$date_ok', '$nom_client', '$phone', '$mail', '$adresse')";
+$sql = "INSERT INTO commande_test (id_plat, quantite, total, date_commande, etat, nom_client, telephone_client, email_client, adresse_client)
+        VALUES ('$id', '$quantite', '$total', '$date_ok', 'En préparation', '$nom_client', '$phone', '$mail', '$adresse')";
 
 // Exécutez la requête
 $conn->exec($sql);
-?>
-
-
-<?php
-
-    include "assets/php/fichiers_php/carousel_mobile.php";
-
-?>
-
-<div class="row main_validation_mobile d-sm-none">
-
-    <div class="col-10 fs-3 message_validation_mobile">
-
-        <?php
-
-            echo "Votre commande est validée. $confirm_mail";
-
-        ?>
-
-    </div>
-
-</div>
-
-<div class="row main_validation d-none d-lg-block">
-
-    <div class="col-lg-12 fs-3 message_validation">
-
-        <?php
-
-            echo "Votre commande est validée. $confirm_mail";
-
-        ?>
-
-    </div>
-
-</div>
-
-</main>
-
-<?php
-
-    include "assets/php/fichiers_php/footer.php";
 
 ?>

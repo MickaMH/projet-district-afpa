@@ -18,7 +18,7 @@
 
 
     <!-- HEADER -->
-    <header class="container-fluid bordures_heade">
+    <header class="container-fluid">
 
         <div class="row">
 

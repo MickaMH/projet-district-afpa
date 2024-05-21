@@ -27,7 +27,7 @@
         <div class="row m-sm-1 mt-sm-0 m-lg-5 d-flex justify-content-center">
             
             <!-- formulaire de commande -->
-            <form action="enreg_com_mail.php" method="POST" name="formulaire" id="document">
+            <form action="fin_commande.php" method="POST" name="formulaire" id="document">
         
             <?php
             

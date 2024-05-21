@@ -4,36 +4,47 @@
 
 ?>
 
-    <!-- MAIN -->
-    <main class="container-fluid pb-5">
+<!-- MAIN -->
+<main class="container-fluid pb-5">
 
-        <!-- intitulé main -->
-        <div class="row">
+        <?php
 
-            <!-- <div id="libelle_categorie"></div> -->
+            include "assets/php/fichiers_php/carousel_mobile.php";
 
-            <?php
-
-                include "assets/php/fichiers_php/carousel_mobile.php";
-
-            ?>
-          
-        </div>
+        ?>
 
         <!-- div remplissage plats par catégorie -->
+        <div class="row d-flex justify-content-center">
+
+            <?php
+            
+                require 'assets/php/dao.php';
+            
+                $libelle_categorie = get_libelle();
+
+            ?>
+
+        </div>
+
         <div class="row d-flex justify-content-around">
 
             <?php
-            
-                include 'assets/php/dao.php';
-            
-                $libelle_categorie = get_libelle();
-            
-            ?>
 
-            <?php
-            
-                include('assets/php/fichiers_php/remplir_plats_categories.php');
+                $plats = get_plats_categorie();
+
+                foreach ($plats as $plat) {
+
+                echo '<div class="col-lg-4 mb-5 mb-lg-5 mt-3 mt-lg-5">';
+                echo '<div class="card w-auto border-4 bordures rounded-5">';
+                echo '<img src="assets/img/plats/' . $plat['image'] . '" class="card-img-top p-3 rounded-5" alt="">';
+                echo '<h5 class="card-text fs-3 fw-medium ms-3">' . $plat['libelle'] . '</h5>';
+                echo '<p class="fw-medium mb-2 ms-3 me-3">Prix: ' . $plat['prix'] . ' €</p>';
+                echo '<p class="fw-medium mb-2 ms-3 me-3" style="cursor: pointer;" onclick="toggleDescription(this)">Voir la description du plat ▼</p>';
+                echo '<div class="fw-medium fst-italic mb-3 ms-3 me-3" id="description-' . $plat['id'] . '" style="display: none;">' . $plat['description'] . '</div>';
+                echo '<a href="commande.php?id=' . $plat['id'] . '" class="card-text fs-5 fw-medium text-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none fond_logo lettres_blanches">Commander</a>';
+                echo '</div>';
+                echo '</div>'; 
+                } 
 
             ?>
 
@@ -43,10 +54,6 @@
         <div class="row mt-lg-5 mb-lg-5">
 
             <div class="col-4 col-lg-4 d-flex">
-
-                <a class="d-flex justify-content-center align-items-center fw-medium mx-auto shadow-lg fs-5 bouton_precedent" 
-                    id="precedent" style="width: 10rem; height: 3rem;"  href="plats_par_categorie.php?id=<?php echo $categorie_id - 1; ?>" role="button">Précédent</a>
-
             </div>
 
             <div class="col-4 col-lg-4 d-flex">
@@ -57,15 +64,11 @@
             </div>
 
             <div class="col-4 col-lg-4 d-flex">
-
-                <a class="d-flex justify-content-center align-items-center fw-medium mx-auto shadow-lg fs-5 bouton_suivant" 
-                    id="suivant" style="width: 10rem; height: 3rem;"  href="plats_par_categorie.php?id=<?php echo $categorie_id + 1; ?>" role="button">Suivant</a>
-    
             </div>
 
         </div>
 
-    </main>
+</main>
 
 <?php
 

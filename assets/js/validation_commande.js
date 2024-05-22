@@ -19,7 +19,7 @@ let phone = document.getElementById("phone");
 let phoneVerif = /^[0-9]{10}$/;
                                                                                     
 let adresse = document.getElementById("adresse");                 
-let adresseVerif = /^(\d+\s*(?:bis|ter)?\s+[a-zA-Z,\. ]+)\s+(\d{5})\s+([a-zA-Z]+)$/;
+let adresseVerif = /^\d+\s+.+(?=.*\d)(?=.*\d{5})(?=.*[a-zA-Z\s]).*$/;
 
 
 let requisQuantite = document.getElementById("requisQuantite"); 

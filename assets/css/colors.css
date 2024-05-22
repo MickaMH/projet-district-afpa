@@ -74,7 +74,7 @@
 
 .bienvenue_desktop{
     color: #980848;
-    font-size: 4.5rem;
+    font-size: 4rem;
 }
 
 .bienvenue_mobile{
@@ -168,10 +168,10 @@ li {
 }
 
 .panneaux{
+    width: 90%; height: 4rem;
     background-color: #980848;
     color: white;
-    border-top-left-radius: 1rem 1rem;
-    border-top-right-radius: 1rem 1rem;
+    border-radius: 1rem 1rem;
     border: 0.2rem solid white;
     border-bottom: none;
 }

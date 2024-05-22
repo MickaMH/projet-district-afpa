@@ -20,7 +20,7 @@
 
             <div class="row">
 
-                 <?php
+                <?php
                     
                     require 'assets/php/dao.php';
 

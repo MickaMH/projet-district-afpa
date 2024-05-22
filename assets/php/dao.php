@@ -80,7 +80,7 @@ function get_plats_categorie() {
     if (isset($_GET['id'])) {
         $platId = $_GET['id'];
     try {
-        $query = "SELECT * FROM plat WHERE id_categorie = $platId";
+        $query = "SELECT * FROM plat WHERE id_categorie = $platId AND active='Yes' ";
         $stmt = $pdo->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -117,9 +117,49 @@ function get_commande() {
 // ----------------------------------------------------------------------------------------------------------------------------------------
 // Fonction Affichage Index
 
-function get_index() {
+/* Index Catégories les populaires */
+function get_index_categories() {
+    global $pdo; // Utilisez la connexion PDO définie précédemment
 
+    try {
+        $query = "SELECT * FROM categorie WHERE active='Yes' ";
+        $stmt = $pdo->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    } catch (PDOException $e) {
+        // Gérer l'erreur (par exemple, journaliser ou afficher un message d'erreur)
+        echo "Erreur : " . $e->getMessage();
+        return [];
+    }
+}
+
+/* Index Plats les plus vendus */
+function get_index_plats() {
+    global $pdo; // Utilisez la connexion PDO définie précédemment
+
+    try {
+        $query = "  SELECT plat.id, plat.image, plat.libelle, SUM(quantite)
+                    FROM commande
+                    LEFT JOIN plat ON commande.id_plat = plat.id
+                    GROUP BY id_plat
+                    ORDER BY SUM(quantite) ASC " ;
+        $stmt = $pdo->prepare($query);
+        $stmt->execute();
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        // Supprimer le premier mot de la colonne "plat.libelle"
+        foreach ($results as &$row) {
+            $row['libelle'] = substr($row['libelle'], strpos($row['libelle'], ' ') + 1);
+        }
+
+        return $results;
+
+    } catch (PDOException $e) {
+        // Gérer l'erreur (par exemple, journaliser ou afficher un message d'erreur)
+        echo "Erreur : " . $e->getMessage();
+        return [];
+    }
 }
 
 

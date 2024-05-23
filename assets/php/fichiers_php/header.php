@@ -119,12 +119,13 @@
     <!-- NAV -->
     <nav class="container-fluid">
     
-        <div class="row fond_logo">
+        <div class="row fond_logo d-flex align-items-center">
 
             <!-- videos -->
-            <div class="col-4 display-inline-block d-none d-lg-block">
+            <div class="col-4 d-none d-lg-block">
 
-                
+                <p class="lettres_blanches promo fw-bold mx-auto">-10%</p>
+                <p class="lettres_blanches fs-4 fw-bold text-center">SUR VOTRE PREMIERE COMMANDE</p>
 
             </div>
     
@@ -139,9 +140,12 @@
     
             </div>
 
-            <div class="col-4 display-inline-block d-none d-lg-block">
+            <div class="col-4 d-none d-lg-block text-center">
 
-
+                <img src="assets/img/district/ecriture_district_blanc.png" class="w-75"><br>
+                <p class="lettres_blanches fs-3">1 rue de la paix 80000 Amiens</p>
+                <p class="lettres_blanches fs-3">Tel: 06.12.34.56.78</p>
+                <p class="lettres_blanches fs-3">Email: TheDistrict@gmail.com</p>
 
             </div>
 

@@ -11,7 +11,7 @@
     <!-- intitulé main -->
     <div class="row">
 
-        <div class="fs-1 fw-medium mt-lg-3 text-center">
+        <div class="fs-1 fw-medium mt-3 mt-lg-3 text-center">
 
             <p class="lettres">PASSER UNE COMMANDE</p>
             

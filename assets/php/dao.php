@@ -1,9 +1,9 @@
 <?php
 
 // --------------------------------------------------------------------------------------------------------------------------
-// Fichier PDO.php
+// Fichier pdo.php
 
-require('assets/php/fichiers_php/PDO.php');
+require('assets/php/fichiers_php/pdo.php');
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Fonction Affichage Catégories
@@ -61,7 +61,7 @@ function get_libelle() {
         if ($resultat) {
             $libelleCategorie = $resultat['libelle'];
             $libelleCategorieMaj = strtoupper($libelleCategorie);
-            echo "<div class='fs-1 fw-medium ms-sm-0 ms-lg-3 mt-lg-3 mb-3 lettres text-center'>$libelleCategorieMaj</div>";
+            echo "<div class='fs-1 fw-medium ms-sm-0 ms-lg-3 mt-3 mt-lg-3 mb-3 lettres text-center'>$libelleCategorieMaj</div>";
 
         } else {
             echo "<div class='fs-1 fw-medium ms-sm-0 ms-lg-3 mt-lg-3 mb-3 lettres text-center'>FIN DES CATEGORIES</div>";
@@ -122,7 +122,12 @@ function get_index_categories() {
     global $pdo; // Utilisez la connexion PDO définie précédemment
 
     try {
-        $query = "SELECT * FROM categorie WHERE active='Yes' ";
+        $query = "  SELECT categorie.id, categorie.libelle, categorie.image, SUM(quantite)
+                    FROM commande
+                    JOIN plat ON commande.id_plat = plat.id
+                    JOIN categorie ON plat.id_categorie = categorie.id
+                    GROUP BY categorie.id
+                    ORDER BY SUM(quantite) DESC ";
         $stmt = $pdo->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -139,11 +144,11 @@ function get_index_plats() {
     global $pdo; // Utilisez la connexion PDO définie précédemment
 
     try {
-        $query = "  SELECT plat.id, plat.image, plat.libelle, SUM(quantite)
+        $query = "  SELECT plat.id, plat.libelle, plat.image, SUM(quantite)
                     FROM commande
                     LEFT JOIN plat ON commande.id_plat = plat.id
                     GROUP BY id_plat
-                    ORDER BY SUM(quantite) ASC " ;
+                    ORDER BY SUM(quantite) DESC ";
         $stmt = $pdo->prepare($query);
         $stmt->execute();
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);

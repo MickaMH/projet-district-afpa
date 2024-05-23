@@ -8,16 +8,19 @@
 <!-- MAIN -->
 <main class="container-fluid pb-5">
 
+    <div class="d-flex">
+    
+    <div class="container-fluid mt-lg-5 d-none d-lg-block d-flex align-self-center" style="width: 40rem; height: auto;">
     <!-- carousel desktop -->
     <div class="row">
 
-        <div class="fw-medium text-center d-none d-lg-block">
+        <div class="col-lg-12 fw-medium text-center d-none d-lg-block">
 
             <div id="carousel_desktop" class="carousel-fade" data-bs-ride="carousel">
 
                 <div class="carousel-inner">
 
-                    <div class="carousel-item active" data-bs-interval="4000">
+                    <div class="carousel-item active shadow-lg" data-bs-interval="4000">
 
                         <p class="d-block w-100 bienvenue_desktop">BIENVENUE</p>
 
@@ -48,16 +51,17 @@
         </div>
 
     </div>
+    </div>
 
 
     <!-- index menu mobile -->
-    <div class="row mt-5 mb-2 d-block d-sm-none">
+    <div class="row mt-5 mb-2 d-block d-sm-none mx-auto">
 
         <div class="card-group text-center">
 
             <div class="d-flex">
 
-                <div class="card shadow-lg border-4 bordures rounded-5 zoom mx-auto mb-4" style="width: 10rem; height: 10rem;">
+                <div class="card shadow-lg border-4 bordures rounded-5 zoom mx-auto mb-4 me-3" style="width: 10rem; height: 10rem;">
 
                     <div>
 
@@ -76,7 +80,7 @@
 
                 </div>
 
-                <div class="card shadow-lg border-4 bordures rounded-5 zoom mx-auto mb-4" style="width: 10rem; height: 10rem;">
+                <div class="card shadow-lg border-4 bordures rounded-5 zoom mx-auto mb-4 ms-3" style="width: 10rem; height: 10rem;">
 
                     <div>
 
@@ -120,9 +124,9 @@
 
     </div>
 
-
+    
     <!-- index menu desktop -->
-    <div class="container-fluid rond bordures mt-lg-5 mb-lg-5 d-none d-lg-block" style="width: 29rem; height: 28rem;">
+    <div class="container-fluid rond bordures mt-lg-5 d-none d-lg-block ms-0" style="width: 29rem; height: 28rem;">
 
         <div class="row mt-3">
 
@@ -213,10 +217,11 @@
         </div>
 
     </div>
-
+    
+    </div>
 
     <!-- panneau catégories + populaires -->
-    <div class="row mb-lg-5 mt-lg-5">
+    <div class="row mb-lg-5 mt-3 mt-lg-5">
 
         <div class="col-lg-12 d-flex justify-content-center">
 
@@ -227,7 +232,7 @@
     </div>
 
     <!-- catégories les + populaires -->
-    <div class="row mb-lg-5 mt-lg-5">
+    <div class="row mb-lg-5 mt-3 mt-lg-5 d-flex justify-content-center">
 
         <?php
                     
@@ -240,10 +245,11 @@
             $libelle = $category['libelle'];
             $libelleMaj = strtoupper($libelle);
 
-            echo '<div class="col-lg-2 mb-5 mb-lg-5 d-flex justify-content-center">';
+            echo '<div class="col-lg-2 mb-5 mb-lg-5 d-flex justify-content-center zoom_2">';
                 echo '<div class="card w-75 border-4 bordures rounded-5">';
+                    echo '<h5 class="card-text fs-3 mt-3 mb-0 fw-medium text-center">' . $libelleMaj . '</h5>';
                     echo '<img src="assets/img/categories/' . $category['image'] . '" class="card-img-top p-3 rounded-5" alt="">';
-                    echo '<a href="plats_par_categorie.php?id=' . $category['id'] . '" class="card-text fs-5 fw-medium text-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none text-uppercase fond_logo lettres_blanches">' . $libelleMaj . '</a>';
+                    echo '<a href="plats_par_categorie.php?id=' . $category['id'] . '" class="card-text fs-5 fw-medium d-flex justify-content-center align-items-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none fond_logo lettres_blanches bouton_mini"> Voir </a>';
                 echo '</div>';
             echo '</div>';
             }
@@ -265,7 +271,7 @@
     </div>
 
     <!-- plats les + vendus -->
-    <div class="row mt-lg-5 mb-lg-5">
+    <div class="row mt-3 mt-lg-5 mb-lg-5">
 
         <?php
 
@@ -273,11 +279,11 @@
 
             foreach ($plats as $plat) {
     
-            echo '<div class="col-lg-2 mb-5 mb-lg-5 d-flex justify-content-center">';
+            echo '<div class="col-lg-2 mb-5 mb-lg-5 d-flex justify-content-center zoom_2">';
                 echo '<div class="card w-75 border-4 bordures rounded-5">';
                     echo '<h5 class="card-text fs-3 mt-3 mb-0 fw-medium text-center">' . $plat['libelle'] . '</h5>';
                     echo '<img src="assets/img/plats/' . $plat['image'] . '" class="card-img img-fluid p-3 rounded-5" alt="">';
-                    echo '<a href="commande.php?id=' . $plat['id'] . '" class="card-text fs-5 fw-medium text-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none fond_logo lettres_blanches">' . "Voir le plat" . '</a>';         
+                    echo '<a href="commande.php?id=' . $plat['id'] . '" class="card-text fs-5 fw-medium d-flex justify-content-center align-items-center shadow-lg p-2 m-3 mt-0 rounded-4 text-decoration-none fond_logo lettres_blanches bouton_mini">' . "Voir le plat" . '</a>';         
                 echo '</div>';
             echo '</div>';
             }

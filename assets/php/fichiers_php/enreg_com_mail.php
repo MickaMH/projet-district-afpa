@@ -1,5 +1,7 @@
 <?php
 
+/* PARTIE EMAIL */
+
 require 'php_mail/vendor/autoload.php';
 
 // Assurez-vous d'avoir inclus la bibliothèque PHPMailer
@@ -143,6 +145,8 @@ if ($mail->send()) {
 } else {
     echo 'Erreur : ' . $mail->ErrorInfo;
 }
+
+/* PARTIE ENREGISTREMENT DONNEES */
 
 // Informations de connexion à la base de données
 $servername = "localhost";

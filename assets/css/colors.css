@@ -79,12 +79,16 @@
     color: white;
 }
 
-.bienvenue_desktop{
-    color: #980848;
-    font-size: 5rem;
+.bordures_bienvenue{
     background-color: white;
     border-radius: 2rem 2rem;
     border: 0.2rem solid black;
+}
+
+.bienvenue_desktop{
+    color: #980848;
+    font-size: 5rem;
+   
 }
 
 .bienvenue_mobile{
@@ -187,8 +191,6 @@ li {
     background-color: #980848;
     color: white;
     border-radius: 1rem 1rem;
-    border: 0.2rem solid white;
-    border-bottom: none;
 }
 
 textarea{
@@ -249,18 +251,36 @@ p{color: black;}
     margin-bottom: 2rem;
 }
 
+.actually{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 25rem; height: auto;
+    border-radius: 0.5rem 0.5rem; border: 0.3rem solid black;
+}
+
+.bordures_promo{
+    border: solid white 0.30rem;
+    border-radius: 1rem 1rem;
+    width: 15rem; height: auto;
+    background-color: blue;
+}
+
 .promo{
-    width: 15rem;
-    height: 15rem;
+    width: 5rem;
+    height: 5rem;
     background-color: white;
     border-radius: 50%;
-    color: #980848;
-    font-size: 6rem;
+    color: blue;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.phrase_promo{
+    font-size: 1.2rem;
+}
 
 /*NEON*/
 .lettres_neon_ok{

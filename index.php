@@ -9,201 +9,111 @@
 <main class="container-fluid pb-5">
 
     <div class="d-flex">
-    
-    <div class="container-fluid mt-lg-5 d-none d-lg-block d-flex align-self-center" style="width: 40rem; height: auto;">
-    <!-- carousel desktop -->
-    <div class="row">
 
-        <div class="col-lg-12 fw-medium text-center d-none d-lg-block">
+        <!-- carousel desktop -->
+        <div class="container-fluid mt-lg-5 d-none d-lg-block d-flex align-self-center bordures_bienvenue" style="width: 45rem; height: auto;">
 
-            <div id="carousel_desktop" class="carousel-fade" data-bs-ride="carousel">
+            <div class="row">
 
-                <div class="carousel-inner">
+                <div class="col-lg-12 fw-medium text-center d-none d-lg-block">
 
-                    <div class="carousel-item active shadow-lg" data-bs-interval="4000">
+                    <div id="carousel_desktop" class="carousel-fade" data-bs-ride="carousel">
 
-                        <p class="d-block w-100 bienvenue_desktop">BIENVENUE</p>
+                        <div class="carousel-inner">
 
-                    </div>
+                            <div class="carousel-item active shadow-lg" data-bs-interval="4000">
 
-                    <div class="carousel-item" data-bs-interval="4000">
+                                <p class="d-block w-100 bienvenue_desktop">&#x1F1EB;&#x1F1F7; BIENVENUE</p>
 
-                        <p class="d-block w-100 bienvenue_desktop">WELCOME</p>
+                            </div>
 
-                    </div>
+                            <div class="carousel-item" data-bs-interval="4000">
 
-                    <div class="carousel-item" data-bs-interval="4000">
+                                <p class="d-block w-100 bienvenue_desktop">&#x1F1EC;&#x1F1E7; WELCOME</p>
 
-                        <p class="d-block w-100 bienvenue_desktop">BIENVENIDA</p>
+                            </div>
 
-                    </div>
+                            <div class="carousel-item" data-bs-interval="4000">
 
-                    <div class="carousel-item" data-bs-interval="4000">
+                                <p class="d-block w-100 bienvenue_desktop">&#x1F1EA;&#x1F1F8; BIENVENIDA</p>
 
-                        <p class="d-block w-100 bienvenue_desktop">WELKOM</p>
+                            </div>
 
-                    </div>
+                            <div class="carousel-item" data-bs-interval="4000">
 
-                </div>
+                                <p class="d-block w-100 bienvenue_desktop">&#x1F1F3;&#x1F1F1; WELKOM</p>
+
+                            </div>
+
+                        </div>
                     
-            </div>
-            
-        </div>
-
-    </div>
-    </div>
-
-
-    <!-- index menu mobile -->
-    <div class="row mt-5 mb-2 d-block d-sm-none mx-auto">
-
-        <div class="card-group text-center">
-
-            <div class="d-flex">
-
-                <div class="card shadow-lg border-4 bordures rounded-5 zoom mx-auto mb-4 me-3" style="width: 10rem; height: 10rem;">
-
-                    <div>
-
-                        <p class="card-text mb-1 fw-medium">Toutes les<br> catégories de plat</p>
-                        <img src="assets/img/icones/icone_categories_transp_2.png" class="card-img mt-1" style="width: 33%;" alt="" title="">
-            
                     </div>
-
-                    <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
-                        
-                        <a href="categories.php" class="text-decoration-none">
-                        <p class="fw-medium lettres_blanches">CATEGORIES</p>
-                        </a>
-
-                    </div>
-
+            
                 </div>
 
-                <div class="card shadow-lg border-4 bordures rounded-5 zoom mx-auto mb-4 ms-3" style="width: 10rem; height: 10rem;">
+            </div>
 
-                    <div>
+        </div>
+
+
+        <!-- index menu mobile -->
+        <div class="row mt-5 mb-2 d-block d-sm-none mx-auto">
+
+            <div class="card-group text-center">
+
+                <div class="d-flex">
+
+                    <div class="card shadow-lg border-4 bordures rounded-5 zoom mx-auto mb-4 me-3" style="width: 10rem; height: 10rem;">
+
+                        <div>
+
+                            <p class="card-text mb-1 fw-medium">Toutes les<br> catégories de plat</p>
+                            <img src="assets/img/icones/icone_categories_transp_2.png" class="card-img mt-1" style="width: 33%;" alt="" title="">
+            
+                        </div>
+
+                        <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
+                        
+                            <a href="categories.php" class="text-decoration-none">
+                            <p class="fw-medium lettres_blanches">CATEGORIES</p>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card shadow-lg border-4 bordures rounded-5 zoom mx-auto mb-4 ms-3" style="width: 10rem; height: 10rem;">
+
+                        <div>
 
                         <p class="card-text mb-1 fw-medium">Retrouvez tous<br> les plats</p>
                         <img src="assets/img/icones/icone_plats_transp_2.png" class="card-img mt-1" style="width: 37%;" alt="" title="">
             
-                    </div>
+                        </div>
 
-                    <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
+                        <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
                         
                         <a href="plats.php" class="text-decoration-none">
                         <p class="fw-medium lettres_blanches">PLATS</p>
                         </a>
 
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="card shadow-lg border-4 bordures rounded-5 zoom mx-auto" style="width: 10rem; height: 10rem;">
-
-                <div>
-
-                    <p class="card-text mb-1 fw-medium">Adressez nous<br> vos demandes</p>
-                    <img src="assets/img/icones/icone_contact_transp_2.png" class="card-img mt-1 ms-2" style="width: 30%;" alt="" title="">
-            
-                </div>
-
-                <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
-                        
-                    <a href="contact.php" class="text-decoration-none">
-                    <p class="fw-medium lettres_blanches">CONTACT</p>
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    
-    <!-- index menu desktop -->
-    <div class="container-fluid rond bordures mt-lg-5 d-none d-lg-block ms-0" style="width: 29rem; height: 28rem;">
-
-        <div class="row mt-3">
-
-            <div class="col-lg-12 text-center d-flex justify-content-center">
-                
-                <div class="card shadow-lg border-4 bordures rounded-5 zoom" style="width: 10rem; height: 10rem;">
-
-                    <div>
-
-                        <p class="card-text mb-1 fw-medium">Toutes les<br> catégories de plat</p>
-                        <img src="assets/img/icones/icone_categories_transp_2.png" class="card-img mt-1" style="width: 33%;" alt="" title="">
-                
-                    </div>
-
-                    <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
-                            
-                        <a href="categories.php" class="text-decoration-none">
-                        <p class="fw-medium lettres_blanches">CATEGORIES</p>
-                        </a>
+                        </div>
 
                     </div>
 
                 </div>
-                
-            </div>
 
-        </div>
-
-        <!-- boussole -->
-        <div class="row">
-
-            <div class="col-lg-12 mt-2 d-flex justify-content-center">
-
-                <img src="assets/img/icones/boussole_1.png" class="" style="width: auto; height: 4rem;" alt="">
-            
-            </div>
-
-        </div>
-
-        <div class="row mt-2 d-flex justify-content-around">
-
-            <div class="col-lg-5 text-center">
-                
-                <div class="card shadow-lg border-4 bordures rounded-5 zoom" style="width: 10rem; height: 10rem;">
-
-                    <div>
-
-                        <p class="card-text mb-1 fw-medium">Retrouvez tous<br> les plats</p>
-                        <img src="assets/img/icones/icone_plats_transp_2.png" class="card-img mt-1" style="width: 37%;" alt="" title="">
-                
-                    </div>
-
-                    <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
-                            
-                        <a href="plats.php" class="text-decoration-none">
-                        <p class="fw-medium lettres_blanches">PLATS</p>
-                        </a>
-
-                    </div>
-
-                </div>
-                
-            </div>
-
-            <div class="col-lg-5 text-center">
-                
-                <div class="card shadow-lg border-4 bordures rounded-5 zoom ms-2" style="width: 10rem; height: 10rem;">
+                <div class="card shadow-lg border-4 bordures rounded-5 zoom mx-auto" style="width: 10rem; height: 10rem;">
 
                     <div>
 
                         <p class="card-text mb-1 fw-medium">Adressez nous<br> vos demandes</p>
                         <img src="assets/img/icones/icone_contact_transp_2.png" class="card-img mt-1 ms-2" style="width: 30%;" alt="" title="">
-                
+            
                     </div>
 
                     <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
-                            
+                        
                         <a href="contact.php" class="text-decoration-none">
                         <p class="fw-medium lettres_blanches">CONTACT</p>
                         </a>
@@ -211,12 +121,104 @@
                     </div>
 
                 </div>
-                
+
             </div>
 
         </div>
 
-    </div>
+    
+        <!-- index menu desktop -->
+        <div class="container-fluid rond bordures mt-lg-5 d-none d-lg-block ms-0" style="width: 29rem; height: 28rem;">
+
+            <div class="row mt-3">
+
+                <div class="col-lg-12 text-center d-flex justify-content-center">
+                
+                    <div class="card shadow-lg border-4 bordures rounded-5 zoom" style="width: 10rem; height: 10rem;">
+
+                        <div>
+
+                            <p class="card-text mb-1 fw-medium">Toutes les<br> catégories de plat</p>
+                            <img src="assets/img/icones/icone_categories_transp_2.png" class="card-img mt-1" style="width: 33%;" alt="" title="">
+                
+                        </div>
+
+                        <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
+                            
+                            <a href="categories.php" class="text-decoration-none">
+                            <p class="fw-medium lettres_blanches">CATEGORIES</p>
+                            </a>
+
+                        </div>
+
+                    </div>
+                
+                </div>
+
+            </div>
+
+            <!-- boussole -->
+            <div class="row">
+
+                <div class="col-lg-12 mt-2 d-flex justify-content-center">
+
+                    <img src="assets/img/icones/boussole_1.png" class="" style="width: auto; height: 4rem;" alt="">
+            
+                </div>
+
+            </div>
+
+            <div class="row mt-2 d-flex justify-content-around">
+
+                <div class="col-lg-5 text-center">
+                
+                    <div class="card shadow-lg border-4 bordures rounded-5 zoom" style="width: 10rem; height: 10rem;">
+
+                        <div>
+
+                            <p class="card-text mb-1 fw-medium">Retrouvez tous<br> les plats</p>
+                            <img src="assets/img/icones/icone_plats_transp_2.png" class="card-img mt-1" style="width: 37%;" alt="" title="">
+                
+                        </div>
+
+                        <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
+                            
+                            <a href="plats.php" class="text-decoration-none">
+                            <p class="fw-medium lettres_blanches">PLATS</p>
+                            </a>
+
+                        </div>
+
+                    </div>
+                
+                </div>
+
+                <div class="col-lg-5 text-center">
+                
+                    <div class="card shadow-lg border-4 bordures rounded-5 zoom ms-2" style="width: 10rem; height: 10rem;">
+
+                        <div>
+
+                            <p class="card-text mb-1 fw-medium">Adressez nous<br> vos demandes</p>
+                            <img src="assets/img/icones/icone_contact_transp_2.png" class="card-img mt-1 ms-2" style="width: 30%;" alt="" title="">
+                
+                        </div>
+
+                        <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
+                            
+                            <a href="contact.php" class="text-decoration-none">
+                            <p class="fw-medium lettres_blanches">CONTACT</p>
+                            </a>
+
+                        </div>
+
+                    </div>
+                
+                </div>
+
+            </div>
+
+        </div>
     
     </div>
 
@@ -298,12 +300,12 @@
 
         <div class="col-lg-12 mt-2 d-flex justify-content-around">
 
-            <a href="https://www.maitresrestaurateurs.fr/" class="text-decoration-none">
-                <img src="assets/img/labels/label_resto.jpg" class="border border-dark rounded-2" alt="" style="width: 10rem; height: auto;">
-            </a>
-
             <a href="https://www.artisanat.fr/metiers/labels-qualifications/titre-maitre-artisan" class="text-decoration-none">
                 <img src="assets/img/labels/artisanat_certifie.jpg" class="border border-dark rounded-2" alt="" style="width: 10rem; height: auto;">
+            </a>
+
+            <a href="https://www.maitresrestaurateurs.fr/" class="text-decoration-none">
+                <img src="assets/img/labels/label_resto.jpg" class="border border-dark rounded-2" alt="" style="width: 10rem; height: auto;">
             </a>
 
             <a href="https://www.bienvenue-a-la-ferme.com/" class="text-decoration-none">

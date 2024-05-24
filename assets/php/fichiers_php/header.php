@@ -124,8 +124,14 @@
             <!-- videos -->
             <div class="col-4 d-none d-lg-block">
 
-                <p class="lettres_blanches promo fw-bold mx-auto">-10%</p>
-                <p class="lettres_blanches fs-4 fw-bold text-center">SUR VOTRE PREMIERE COMMANDE</p>
+                <div class="actually mx-auto mb-5">
+                    <h1>" EN CE MOMENT "</h1>
+                </div>
+
+                <div class="bordures_promo mx-auto">
+                    <p class="promo fw-bold mx-auto mt-3">-10%</p>
+                    <p class="phrase_promo lettres_blanches fw-bold text-center">Sur catégorie VEGGIE</p>
+                </div>
 
             </div>
     

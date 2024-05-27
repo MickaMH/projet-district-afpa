@@ -125,7 +125,7 @@
             <div class="col-4 d-none d-lg-block">
 
                 <div class="actually mx-auto mb-5">
-                    <h1>" EN CE MOMENT "</h1>
+                    <p class="fs-2 fw-medium lettres_blanches">" En ce moment "</p>
                 </div>
 
                 <div class="bordures_promo mx-auto">

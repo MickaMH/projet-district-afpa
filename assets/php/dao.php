@@ -31,7 +31,10 @@ function get_plats() {
     global $pdo; // Utilisez la connexion PDO définie précédemment
 
     try {
-        $query = "SELECT * FROM plat WHERE active='Yes' ";
+        $query = "  SELECT * 
+                    FROM plat 
+                    WHERE active='Yes' 
+                    ORDER BY id_categorie ";
         $stmt = $pdo->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -127,7 +130,8 @@ function get_index_categories() {
                     JOIN plat ON commande.id_plat = plat.id
                     JOIN categorie ON plat.id_categorie = categorie.id
                     GROUP BY categorie.id
-                    ORDER BY SUM(quantite) DESC ";
+                    ORDER BY SUM(quantite) DESC
+                    LIMIT 3 ";
         $stmt = $pdo->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -148,7 +152,8 @@ function get_index_plats() {
                     FROM commande
                     LEFT JOIN plat ON commande.id_plat = plat.id
                     GROUP BY id_plat
-                    ORDER BY SUM(quantite) DESC ";
+                    ORDER BY SUM(quantite) DESC
+                    LIMIT 3 ";
         $stmt = $pdo->prepare($query);
         $stmt->execute();
         $results = $stmt->fetchAll(PDO::FETCH_ASSOC);

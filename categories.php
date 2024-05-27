@@ -18,7 +18,7 @@
 
             </div>
 
-            <div class="row">
+            <div class="row d-flex justify-content-around">
 
                 <?php
                     

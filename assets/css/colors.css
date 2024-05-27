@@ -254,13 +254,15 @@ p{color: black;}
 .actually{
     display: flex;
     justify-content: center;
-    background-color: white;
-    width: 25rem; height: auto;
-    border-radius: 0.5rem 0.5rem; border: 0.3rem solid black;
+    background-color: blue;
+    width: 22rem; height: 3.5rem;
+    border-radius: 0.5rem 0.5rem;
+    border: 0.3rem solid white;
+    color: white;margin-top: 0rem;
 }
 
 .bordures_promo{
-    border: solid white 0.30rem;
+    border: solid white 0.3rem;
     border-radius: 1rem 1rem;
     width: 15rem; height: auto;
     background-color: blue;

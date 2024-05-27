@@ -222,18 +222,19 @@
     
     </div>
 
-    <!-- panneau catégories + populaires -->
-    <div class="row mb-lg-5 mt-3 mt-lg-5">
 
-        <div class="col-lg-12 d-flex justify-content-center">
+    <!-- panneau Top 3 Catégories -->
+    <div class="row mb-lg-5 mt-3 mt-lg-5 d-flex justify-content-center">
 
-            <p class="fs-3 d-flex justify-content-center align-items-center fw-medium panneaux">Catégories les plus populaires</p>
+        <div class="col-lg-10 d-flex justify-content-center">
+
+            <p class="fs-3 d-flex justify-content-center align-items-center fw-medium panneaux">Top 3 des Catégories</p>
 
         </div>
 
     </div>
 
-    <!-- catégories les + populaires -->
+    <!-- Top 3 Catégories -->
     <div class="row mb-lg-5 mt-3 mt-lg-5 d-flex justify-content-center">
 
         <?php
@@ -261,19 +262,19 @@
     </div>
 
 
-    <!-- panneau plats + vendus -->
-    <div class="row mt-lg-5 mb-lg-5">
+    <!-- panneau Top 3 Plats -->
+    <div class="row mt-lg-5 mb-lg-5 d-flex justify-content-center">
 
-        <div class="col-lg-12 d-flex justify-content-center">
+        <div class="col-lg-10 d-flex justify-content-center">
 
-            <p class="fs-3 d-flex justify-content-center align-items-center fw-medium panneaux">Plats les plus vendus</p>
+            <p class="fs-3 d-flex justify-content-center align-items-center fw-medium panneaux">Top 3 des Plats</p>
 
         </div>
 
     </div>
 
-    <!-- plats les + vendus -->
-    <div class="row mt-3 mt-lg-5 mb-lg-5">
+    <!-- Top 3 plats -->
+    <div class="row mt-3 mt-lg-5 mb-lg-5 d-flex justify-content-center">
 
         <?php
 

@@ -64,7 +64,7 @@ function get_libelle() {
         if ($resultat) {
             $libelleCategorie = $resultat['libelle'];
             $libelleCategorieMaj = strtoupper($libelleCategorie);
-            echo "<div class='fs-1 fw-medium ms-sm-0 ms-lg-3 mt-3 mt-lg-3 mb-3 lettres text-center'>$libelleCategorieMaj</div>";
+            echo "<div class='col-5 col-lg-2 fs-1 fw-medium ms-sm-0 ms-lg-3 mt-3 mt-lg-3 mb-3 lettres text-center fond_intitule'>$libelleCategorieMaj</div>";
 
         } else {
             echo "<div class='fs-1 fw-medium ms-sm-0 ms-lg-3 mt-lg-3 mb-3 lettres text-center'>FIN DES CATEGORIES</div>";

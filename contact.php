@@ -8,11 +8,11 @@
     <main class="container-fluid pb-5">
 
         <!-- intitulé main -->
-        <div class="row">
+        <div class="row d-flex justify-content-center">
 
-            <div class="fs-1 fw-medium ms-lg-3 mt-3 mt-lg-3 text-center">
+            <div class="col-12 col-lg-4 fs-1 fw-medium ms-lg-3 mt-3 mt-lg-3 text-center">
 
-                <p class="lettres">FORMULAIRE DE CONTACT</p>
+                <p class="lettres fond_intitule border-3">FORMULAIRE DE CONTACT</p>
             
             </div>
 

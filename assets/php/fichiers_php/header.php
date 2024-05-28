@@ -51,7 +51,7 @@
                             <!-- liens navbar -->
                             <div class="collapse navbar-collapse justify-content-center ms-2 mb-lg-5" id="navbarTogglerDemo03">
     
-                                <ul class="navbar-nav fs-1 fw-medium gap-lg-5">
+                                <ul class="navbar-nav border-4 fs-1 fw-medium gap-lg-5">
     
                                     <li class="nav-item">
 

@@ -99,7 +99,7 @@
                 
                                 </div>
 
-                                <div id="suggestions" class="fs-4 fw-medium"></div>
+                                <div id="suggestions" class="fs-4 fw-medium li_recherche"></div>
                         
                             </div>
 

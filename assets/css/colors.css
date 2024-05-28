@@ -142,7 +142,7 @@ input:focus, input.form-control:focus {
     border-bottom-right-radius: 2rem 2rem;
 }
 
-li {
+.li_recherche {
     list-style-type: none;
 }
 

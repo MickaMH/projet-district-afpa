@@ -1,9 +1,8 @@
 <?php
 
-    include "assets/php/fichiers_php/header.php";
+    require "assets/php/fichiers_php/header.php";
 
 ?>
-
 
 <!-- MAIN -->
 <main class="container-fluid pb-5">
@@ -75,7 +74,7 @@
                         <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
                         
                             <a href="categories.php" class="text-decoration-none">
-                            <p class="fw-medium lettres_blanches">CATEGORIES</p>
+                            <p class="fw-medium lettres_blanches">CATÉGORIES</p>
                             </a>
 
                         </div>
@@ -146,7 +145,7 @@
                         <div class="mt-3 ms-2 me-2 rounded-5 fond_logo text-center" style="height: 1.6rem;">
                             
                             <a href="categories.php" class="text-decoration-none">
-                            <p class="fw-medium lettres_blanches">CATEGORIES</p>
+                            <p class="fw-medium lettres_blanches">CATÉGORIES</p>
                             </a>
 
                         </div>
@@ -319,7 +318,6 @@
 
 
 </main>
-
 
 <?php
 

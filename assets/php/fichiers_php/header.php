@@ -10,7 +10,7 @@
             crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/colors.css" type="text/css" media="all">
 
-    <title>Accueil</title>
+    <title>The District</title>
 </head>
 
 
@@ -61,7 +61,7 @@
     
                                     <li class="nav-item">
 
-                                        <a class="liens_header" aria-current="page" href="categories.php">CATEGORIES</a>
+                                        <a class="liens_header" aria-current="page" href="categories.php">CATÉGORIES</a>
 
                                     </li>
     

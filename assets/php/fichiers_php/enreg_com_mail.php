@@ -1,6 +1,6 @@
 <?php
 
-/* PARTIE EMAIL */
+
 
 require 'php_mail/vendor/autoload.php';
 
@@ -146,7 +146,8 @@ if ($mail->send()) {
     echo 'Erreur : ' . $mail->ErrorInfo;
 }
 
-/* PARTIE ENREGISTREMENT DONNEES */
+
+
 
 // Informations de connexion à la base de données
 $servername = "localhost";
@@ -155,31 +156,42 @@ $username = "admin";
 $password = "Afpa1234";
 
 // Créez une connexion à la base de données MySQL
-$conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// Définissez les options pour gérer les erreurs
-$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // Requête d'insertion
+    $id = $_POST['idCommande'];
+    $prix = $_POST['prixCommande'];
+    $quantite = $_POST['quantiteCommande'];
+    $date = new DateTime();
+    $date_ok = $date->format('Y-m-d H:i:s');
+    $nom = $_POST['nomCommande'];
+    $prenom = $_POST['prenomCommande'];
+    $phone = $_POST['phoneCommande'];
+    $mail = $_POST['mailCommande'];
+    $adresse = $_POST['adresseCommande'];
 
-// Requête d'insertion
-$id = $_POST['idCommande'];
-$prix = $_POST['prixCommande'];
-$quantite = $_POST['quantiteCommande'];
-$date = new DateTime();
-$date_ok = $date->format('Y-m-d H:i:s');
-$nom = $_POST['nomCommande'];
-$prenom = $_POST['prenomCommande'];
-$phone = $_POST['phoneCommande'];
-$mail = $_POST['mailCommande'];
-$adresse = $_POST['adresseCommande'];
+    $nom_client = $nom . ' ' . $prenom;
+    $total = ($prix * $quantite);
 
-$nom_client = $nom . ' ' . $prenom;
+    $sql = "INSERT INTO commande_test (id_plat, quantite, total, date_commande, etat, nom_client, telephone_client, email_client, adresse_client)
+            VALUES (:id, :quantite, :total, :date_ok, 'En préparation', :nom_client, :phone, :mail, :adresse)";
 
-$total = ($prix * $quantite);
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':id', $id);
+    $stmt->bindParam(':quantite', $quantite);
+    $stmt->bindParam(':total', $total);
+    $stmt->bindParam(':date_ok', $date_ok);
+    $stmt->bindParam(':nom_client', $nom_client);
+    $stmt->bindParam(':phone', $phone);
+    $stmt->bindParam(':mail', $mail);
+    $stmt->bindParam(':adresse', $adresse);
 
-$sql = "INSERT INTO commande_test (id_plat, quantite, total, date_commande, etat, nom_client, telephone_client, email_client, adresse_client)
-        VALUES ('$id', '$quantite', '$total', '$date_ok', 'En préparation', '$nom_client', '$phone', '$mail', '$adresse')";
+    $stmt->execute();
 
-// Exécutez la requête
-$conn->exec($sql);
+} catch (PDOException $e) {
+    echo "Erreur : " . $e->getMessage();
+}
 
 ?>

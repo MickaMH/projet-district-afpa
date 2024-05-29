@@ -1,4 +1,3 @@
-<!-- HEADER -->
 <?php
 
     include "assets/php/fichiers_php/header.php";

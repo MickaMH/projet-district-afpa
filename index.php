@@ -273,7 +273,7 @@
     </div>
 
     <!-- Top 3 plats -->
-    <div class="row mt-3 mt-lg-5 mb-lg-5 d-flex justify-content-center">
+    <div class="row mt-3 mt-lg-5 mb-3 mb-lg-5 d-flex justify-content-center">
 
         <?php
 

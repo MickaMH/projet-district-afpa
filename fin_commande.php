@@ -50,7 +50,7 @@
 
         <div class="col-12 col-lg-12 d-flex justify-content-center">
 
-            <a class="d-flex justify-content-center align-items-center fw-medium mx-auto shadow-lg fs-5 rounded-4 bouton_categories" 
+            <a class="d-flex justify-content-center align-items-center fw-medium shadow-lg fs-5 rounded-4 bouton_categories" 
                 style="width: 10rem; height: 3rem;" href="index.php" role="button">Accueil</a>
                         
         </div>        

@@ -34,7 +34,7 @@
     border-radius: 25%;
 }
 
-navbar-nav{
+navbar-n{
     background-color: white;
     border: solid #980848;
     padding-left: 2rem;
@@ -247,7 +247,7 @@ p{color: black;}
 }
 
 .main_validation_mobile{
-    width: auto; height: auto;
+    width: auto; height: 26rem;
     display: flex;
     justify-content: center;
     align-content: center;

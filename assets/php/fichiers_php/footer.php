@@ -24,22 +24,22 @@
 
                 </div>
 
-                <div class="col-lg-2 offset-5 mx-auto d-flex align-items-center">
+                <div class="col-lg-2 mx-auto d-flex align-items-center">
 
                     <a href="https://www.facebook.com/facebook/" class="text-decoration-none">
-                        <img src="assets/img/icones/logo_facebook.png" alt="" title="" style="width: 81%; height : auto"  class="mb-3 shadow-lg">
+                        <img src="assets/img/icones/logo_facebook.png" alt="" title="" style="width: 65%; height : auto"  class="mb-3 shadow-lg">
                     </a>
 
                     <a href="https://www.instagram.com/" class="text-decoration-none">
-                        <img src="assets/img/icones/logo_insta.png" alt="" title="" style="width: 81%; height : auto" class="mb-3 shadow-lg">
+                        <img src="assets/img/icones/logo_insta.png" alt="" title="" style="width: 65%; height : auto" class="mb-3 shadow-lg">
                     </a>
 
                     <a href="https://twitter.com/" class="text-decoration-none">
-                        <img src="assets/img/icones/logo_x.png" alt="" title="" style="width: 81%; height : auto" class="mb-3 shadow-lg">
+                        <img src="assets/img/icones/logo_x.png" alt="" title="" style="width: 68%; height : auto" class="mb-3 shadow-lg">
                     </a>
 
                     <a href="https://fr.linkedin.com/" class="text-decoration-none">
-                        <img src="assets/img/icones/logo_linkedin.png" alt="" title="" style="width: 81%; height : auto" class="mb-3 shadow-lg">
+                        <img src="assets/img/icones/logo_linkedin.png" alt="" title="" style="width: 65%; height : auto" class="mb-3 shadow-lg">
                     </a>
            
                 </div>
@@ -83,7 +83,7 @@
                     </a>
 
                     <a href="https://twitter.com/" class="text-decoration-none">
-                        <img src="assets/img/icones/logo_x.png" alt="" title="" style="width: 81%; height : auto" class="mb-3 shadow-lg">
+                        <img src="assets/img/icones/logo_x.png" alt="" title="" style="width: 84%; height : auto" class="mb-3 shadow-lg">
                     </a>
 
                     <a href="https://fr.linkedin.com/" class="text-decoration-none">

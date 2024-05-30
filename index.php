@@ -5,12 +5,12 @@
 ?>
 
 <!-- MAIN -->
-<main class="container-fluid pb-5">
+<main class="container-fluid pb-lg-5">
 
-    <div class="d-flex">
+    <!-- <div class="d-flex"> -->
 
         <!-- carousel desktop -->
-        <div class="container-fluid mt-lg-5 d-none d-lg-block d-flex align-self-center bordures_bienvenue" style="width: 45rem; height: auto;">
+        <div class="container-fluid d-none d-lg-block d-flex align-self-center bordures_bienvenue" style="width: 45rem; height: auto;">
 
             <div class="row">
 
@@ -127,7 +127,7 @@
 
     
         <!-- index menu desktop -->
-        <div class="container-fluid rond bordures mt-lg-5 d-none d-lg-block ms-0" style="width: 29rem; height: 28rem;">
+        <div class="container-fluid rond bordures mt-lg-3 d-none d-lg-block" style="width: 29rem; height: 28rem;">
 
             <div class="row mt-3">
 
@@ -219,11 +219,11 @@
 
         </div>
     
-    </div>
+    <!-- </div> -->
 
 
     <!-- panneau Top 3 Catégories -->
-    <div class="row mb-lg-5 mt-3 mt-lg-5 d-flex justify-content-center">
+    <div class="row mb-3 mb-lg-5 mt-5 mt-lg-5 d-flex justify-content-center">
 
         <div class="col-lg-10 d-flex justify-content-center">
 

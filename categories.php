@@ -5,7 +5,7 @@
 ?>
 
 <!-- MAIN -->
-<main class="container-fluid pb-5">
+<main class="container-fluid pb-lg-5">
 
     <!-- intitulé main -->
     <div class="row d-flex justify-content-center">

@@ -141,6 +141,7 @@ $mail->Body = $message;
 // Envoyez l'e-mail
 if ($mail->send()) {
     $confirm_mail = "Un email de confirmation vous a été envoyé à&nbsp;<span class='fw-medium'>$client_mail</span>.";
+    $confirm_mail_mobile = "Un email de confirmation vous a été envoyé à&nbsp;<span class='fw-medium'>$client_mail</span>.";
 
 } else {
     echo 'Erreur : ' . $mail->ErrorInfo;

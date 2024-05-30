@@ -19,7 +19,7 @@
 
             <?php
 
-                echo "Votre commande est validée. $confirm_mail";
+                echo "Votre commande est validée. $confirm_mail_mobile";
 
             ?>
 

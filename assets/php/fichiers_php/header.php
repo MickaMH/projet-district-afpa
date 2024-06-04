@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="The District est un restaurant situé à Amiens">
+    <meta name="keywords" content="restaurant, amiens, 80000">
+    <meta name="robots" content="noindex">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
             rel="stylesheet" 
@@ -10,7 +14,8 @@
             crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/colors.css" type="text/css" media="all">
 
-    <title>The District</title>
+    <title>Restaurant The District</title>
+
 </head>
 
 
